@@ -7,7 +7,7 @@ USER root
 RUN \
   apt-get update && \
   apt-get upgrade -y && \
-  apt-get install -y vim git wget libfreetype6 libfontconfig bzip2 && \
+  apt-get install -y nodejs npm vim git wget libfreetype6 libfontconfig bzip2 && \
   mkdir -p /srv/var && \
   wget -q --no-check-certificate -O /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
   tar -xjf /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -C /tmp && \
