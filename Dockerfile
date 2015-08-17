@@ -18,6 +18,7 @@ RUN \
   ln -s /srv/var/casperjs/bin/casperjs /usr/bin/casperjs && \
   apt-get autoremove -y && \
   apt-get clean all
+RUN /usr/sbin/groupmod -g 497 docker && /usr/sbin/usermod -g docker jenkins
 USER jenkins
 
 # Use Jenkins container default endpoint
