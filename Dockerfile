@@ -2,7 +2,7 @@ FROM zenchicken/jenkins-codepipeline
 
 MAINTAINER jsh@digitalmaelstrom.net
 
-ENV PHANTOMJS_VERSION 1.9.7
+ENV PHANTOMJS_VERSION 1.9.8
 USER root
 RUN \
   apt-get update && \
@@ -17,7 +17,8 @@ RUN \
   git clone https://github.com/n1k0/casperjs.git /srv/var/casperjs && \
   ln -s /srv/var/casperjs/bin/casperjs /usr/bin/casperjs && \
   apt-get autoremove -y && \
-  apt-get clean all
+  apt-get clean all && \
+  ln -s /usr/bin/nodejs /usr/bin/node
 RUN /usr/sbin/groupmod -g 497 docker && /usr/sbin/usermod -g docker jenkins
 USER jenkins
 
