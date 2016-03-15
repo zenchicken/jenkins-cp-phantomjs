@@ -16,6 +16,7 @@ RUN \
   ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs && \
   git clone https://github.com/n1k0/casperjs.git /srv/var/casperjs && \
   ln -s /srv/var/casperjs/bin/casperjs /usr/bin/casperjs && \
+  apt-get install awscli && \
   apt-get autoremove -y && \
   apt-get clean all && \
   ln -s /usr/bin/nodejs /usr/bin/node
