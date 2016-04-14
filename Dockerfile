@@ -22,9 +22,6 @@ RUN \
   ln -s /usr/bin/nodejs /usr/bin/node
 RUN /usr/sbin/groupmod -g 497 docker && /usr/sbin/usermod -g docker jenkins
 
-# Standard SSH port
-EXPOSE 22
-
 USER root
 RUN \
     command curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
