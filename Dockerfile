@@ -33,7 +33,7 @@ RUN \
     /bin/bash -l -c "source /etc/profile" && \
     /bin/bash -l -c "mkdir /var/lib/gems" && \
     /bin/bash -l -c "chmod 757 /var/lib/gems" && \
-    apt-get install -y ruby-dev && \
+    apt-get install -y libffi-dev && \
     npm install gulp -g
 
 
